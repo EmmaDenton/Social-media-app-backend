@@ -4,6 +4,9 @@
 
 This project is the backend of a social media platform. Users can share their thoughts, share reactions to each others thoughts and add other users as friends.
 
+https://github.com/EmmaDenton/Social-media-app-backend/assets/141465015/be54f5b2-c744-4336-8c51-317df7bd3d4d
+
+
 ## User Story
 
 ```md
