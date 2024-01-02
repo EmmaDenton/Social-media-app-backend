@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Reaction Subdocument Schema
+function formatDate(date) {
+  return date.toLocaleDateString('en-US');
+}
+
 const reactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
@@ -17,10 +20,10 @@ const reactionSchema = new Schema({
         required: true
     },
     createdAt: {
-        type: Date,
-        default: Date.now,
-        get: timestamp => dateFormat(timestamp) // Remember to define dateFormat
-    }
+      type: Date,
+      default: Date.now,
+      get: formatDate
+  },
 }, {
     toJSON: {
         getters: true
@@ -37,8 +40,8 @@ const thoughtSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    get: timestamp => dateFormat(timestamp)
-  },
+    get: formatDate
+},
   username: {
     type: String,
     required: true
